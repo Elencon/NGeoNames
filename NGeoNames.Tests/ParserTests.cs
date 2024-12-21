@@ -10,14 +10,14 @@ public class ParserTests
     [ExpectedException(typeof(ParserException))]
     public void ParserThrowsOnInvalidData()
     {
-        var target = GeoFileReader.ReadAdmin1Codes(@"testdata\invalid_admin1CodesASCII.txt").ToArray();
+        _ = GeoFileReader.ReadAdmin1Codes(@"testdata\invalid_admin1CodesASCII.txt").ToArray();
     }
 
     [TestMethod]
     [ExpectedException(typeof(FileNotFoundException))]
     public void ParserThrowsOnNonExistingFile()
     {
-        var target = GeoFileReader.ReadAdmin1Codes(@"testdata\non_existing_file.txt").ToArray();
+        _ = GeoFileReader.ReadAdmin1Codes(@"testdata\non_existing_file.txt").ToArray();
     }
 
     [TestMethod]
@@ -886,98 +886,98 @@ public class ParserTests
     [TestMethod]
     public void FileReader_Admin1Codes_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_admin1CodesASCII.txt"))
-            GeoFileReader.ReadAdmin1Codes(s).Count();
+        using var s = File.OpenRead(@"testdata\test_admin1CodesASCII.txt");
+        _ = GeoFileReader.ReadAdmin1Codes(s).Count();
     }
 
     [TestMethod]
     public void FileReader_Admin2Codes_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_admin2Codes.txt"))
-            GeoFileReader.ReadAdmin2Codes(s).Count();
+        using var s = File.OpenRead(@"testdata\test_admin2Codes.txt");
+        _ = GeoFileReader.ReadAdmin2Codes(s).Count();
     }
 
     [TestMethod]
     public void FileReader_AlternateNames_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_alternateNames.txt"))
-            GeoFileReader.ReadAlternateNames(s).Count();
+        using var s = File.OpenRead(@"testdata\test_alternateNames.txt");
+        _ = GeoFileReader.ReadAlternateNames(s).Count();
     }
 
     [TestMethod]
     public void FileReader_AlternateNamesV2_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_alternateNamesV2.txt"))
-            GeoFileReader.ReadAlternateNamesV2(s).Count();
+        using var s = File.OpenRead(@"testdata\test_alternateNamesV2.txt");
+        _ = GeoFileReader.ReadAlternateNamesV2(s).Count();
     }
 
     [TestMethod]
     public void FileReader_Continent_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_continentCodes.txt"))
-            GeoFileReader.ReadContinents(s).Count();
+        using var s = File.OpenRead(@"testdata\test_continentCodes.txt");
+        _ = GeoFileReader.ReadContinents(s).Count();
     }
 
     [TestMethod]
     public void FileReader_CountryInfo_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_CountryInfo.txt"))
-            GeoFileReader.ReadCountryInfo(s).Count();
+        using var s = File.OpenRead(@"testdata\test_CountryInfo.txt");
+        _ = GeoFileReader.ReadCountryInfo(s).Count();
     }
 
     [TestMethod]
     public void FileReader_ExtendedGeoNames_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_extendedgeonames.txt"))
-            GeoFileReader.ReadExtendedGeoNames(s).Count();
+        using var s = File.OpenRead(@"testdata\test_extendedgeonames.txt");
+        _ = GeoFileReader.ReadExtendedGeoNames(s).Count();
     }
 
     [TestMethod]
     public void FileReader_FeatureClasses_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_featureclasses_en.txt"))
-            GeoFileReader.ReadFeatureClasses(s).Count();
+        using var s = File.OpenRead(@"testdata\test_featureclasses_en.txt");
+        _ = GeoFileReader.ReadFeatureClasses(s).Count();
     }
 
     [TestMethod]
     public void FileReader_FeatureCodes_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_featurecodes_en.txt"))
-            GeoFileReader.ReadFeatureCodes(s).Count();
+        using var s = File.OpenRead(@"testdata\test_featurecodes_en.txt");
+        _ = GeoFileReader.ReadFeatureCodes(s).Count();
     }
 
     [TestMethod]
     public void FileReader_GeoNames_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_geonames.txt"))
-            GeoFileReader.ReadGeoNames(s).Count();
+        using var s = File.OpenRead(@"testdata\test_geonames.txt");
+        _ = GeoFileReader.ReadGeoNames(s).Count();
     }
 
     [TestMethod]
     public void FileReader_Hierarchy_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_hierarchy.txt"))
-            GeoFileReader.ReadHierarchy(s).Count();
+        using var s = File.OpenRead(@"testdata\test_hierarchy.txt");
+        _ = GeoFileReader.ReadHierarchy(s).Count();
     }
 
     [TestMethod]
     public void FileReader_ISOLanguageCode_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_iso-languagecodes.txt"))
-            GeoFileReader.ReadISOLanguageCodes(s).Count();
+        using var s = File.OpenRead(@"testdata\test_iso-languagecodes.txt");
+        _ = GeoFileReader.ReadISOLanguageCodes(s).Count();
     }
 
     [TestMethod]
     public void FileReader_TimeZone_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_timeZones.txt"))
-            GeoFileReader.ReadTimeZones(s).Count();
+        using var s = File.OpenRead(@"testdata\test_timeZones.txt");
+        _ = GeoFileReader.ReadTimeZones(s).Count();
     }
 
     [TestMethod]
     public void FileReader_UserTags_StreamOverload()
     {
-        using (var s = File.OpenRead(@"testdata\test_usertags.txt"))
-            GeoFileReader.ReadUserTags(s).Count();
+        using var s = File.OpenRead(@"testdata\test_usertags.txt");
+        _ = GeoFileReader.ReadUserTags(s).Count();
     }
 }
